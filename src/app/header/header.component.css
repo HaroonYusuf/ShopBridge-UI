@@ -1,0 +1,14 @@
+.navbar {
+    box-shadow: 1px 1px 5px #ccc;
+}
+
+.header {
+    color: var(--x-primary) !important;
+}
+
+.btn-secondary{
+    background: transparent !important;
+    color: var(--x-primary) !important;
+    /* border-color: var(--x-primary) !important; */
+    border-style: none;
+}

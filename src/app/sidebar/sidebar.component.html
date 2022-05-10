@@ -1,0 +1,27 @@
+<div class="side-nav">
+  <div class="pt-2">
+    <ul class="list-group pl-3 pr-3">
+      <!-- <a [routerLink]="item.route" 
+        class="list-group-item mb-2"
+        *ngFor="let item of sideNavItems"
+        [class.active]="item.isActive"
+        [class.not-active]="!item.isActive"
+        (click)="open(item)">{{item.name}}</a> -->
+      <!-- <a routerLinkActive="active" [routerLink]="'dashboard'" class="list-group-item">
+        <mat-icon>home</mat-icon>
+        <span class="link-title">Dashboard </span>
+      </a> -->
+      <a
+        routerLinkActive="active"
+        #inventory="routerLinkActive"
+        [class.not-active]="!inventory.isActive"
+        routerLink="/inventory"
+        class="list-group-item"
+        >Inventory</a
+      >
+      <a routerLinkActive="active" class="list-group-item" (click)="logout()"
+        >Logout</a
+      >
+    </ul>
+  </div>
+</div>

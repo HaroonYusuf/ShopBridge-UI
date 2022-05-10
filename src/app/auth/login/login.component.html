@@ -1,0 +1,41 @@
+<div class="pt-5">
+  <mat-card class="mt-5">
+    <mat-card-title class="title">
+      <h1>Product Admin Login</h1>
+    </mat-card-title>
+    <form [formGroup]="login" (ngSubmit)="log()" class="example-form mt-4">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Company Email</mat-label>
+        <input
+          matInput
+          placeholder=""
+          value=""
+          formControlName="email"
+          type="email"
+          autocomplete="off"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder=""
+          value=""
+          formControlName="password"
+          type="password"
+        />
+      </mat-form-field>
+
+      <mat-card-actions class="mb-0 p-0 text-center">
+        <button type="submit" mat-flat-button color="primary" class="w-25">Login</button>
+        <!-- <button class="btn1" mat-raised-button color="" routerLink="/step1">Register</button> -->
+      </mat-card-actions>
+      
+      <div class="mt-2 text-center">
+        Don't have account? &nbsp;<a id="register-here-btn" href="/register">Register here</a>
+      </div>
+      <br />  
+    </form>
+  </mat-card>
+</div>

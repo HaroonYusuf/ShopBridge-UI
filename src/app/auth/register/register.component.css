@@ -1,0 +1,26 @@
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #f44336;
+}
+
+mat-card {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 4%;
+}
+
+example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+}
+
+#login-here-btn {
+  text-decoration: none !important;
+  color: #f44336;
+}

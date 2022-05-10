@@ -1,0 +1,20 @@
+<div *ngIf="router.url !== '/login'">
+  <div *ngIf="router.url !== '/register'">
+      <app-header></app-header>
+      <div class="row w-100 mt-3">    
+        <div class="col-12 ml-3" style="background-color: #eee;">
+          <h3 class="text-dark">
+            <router-outlet></router-outlet>
+          </h3>
+        </div>
+      </div>
+   
+  </div>
+  
+</div>
+<div *ngIf="router.url === '/login'">
+  <app-login></app-login>
+</div>
+<div *ngIf="router.url === '/register'">
+  <app-register></app-register>
+</div>

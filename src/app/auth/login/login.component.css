@@ -1,0 +1,27 @@
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #3f51b5;
+}
+
+mat-card {
+  width: 30%;
+  margin: 0 auto;
+  padding-bottom: 0px;
+}
+
+example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+#register-here-btn {
+  text-decoration: none !important;
+  color: #f44336;
+}
+
+.example-full-width {
+  width: 100%;
+}

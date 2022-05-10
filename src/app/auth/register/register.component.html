@@ -1,0 +1,118 @@
+<div clss="w-100">
+  <mat-card>
+    <mat-card-title class="title">
+      <h1>Company Registration</h1>
+    </mat-card-title>
+    <form [formGroup]="step1Data" (ngSubmit)="register()" class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Company Name</mat-label>
+        <input
+          matInput
+          placeholder=""
+          value=""
+          formControlName="name"
+          type="text"
+          autocomplete="off"
+        />
+        <mat-error
+          *ngIf="
+            step1Data.controls['name'].errors &&
+            step1Data.controls['name'].hasError('required')
+          "
+        >
+          Company Name is required
+        </mat-error>
+        <mat-error *ngIf="step1Data.controls['name'].errors && step1Data.controls['name'].hasError('minlength')">
+          Company Name Should be alteast 3 chartacters long 
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Company Contact</mat-label>
+        <input
+          matInput
+          placeholder=""
+          value=""
+          formControlName="contact"
+          type="text"
+          autocomplete="off"
+        />
+        <mat-error
+          *ngIf="
+            step1Data.controls['contact'].errors &&
+            step1Data.controls['contact'].hasError('required')
+          ">
+          Company Contact is required
+        </mat-error>
+        <mat-error *ngIf="step1Data.controls['contact'].errors && step1Data.controls['contact'].hasError('minlength')">
+          Company Contact Should be alteast 10 chartacters long 
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Company Email</mat-label>
+        <input
+          matInput
+          placeholder=""
+          value=""
+          formControlName="email"
+          type="email"
+          autocomplete="off"
+        />
+        <mat-error
+          *ngIf="
+            step1Data.controls['email'].errors &&
+            step1Data.controls['email'].hasError('required')
+          "
+        >
+          Email is required
+        </mat-error>
+        <!-- <mat-error *ngIf="step1Data.controls['userName'].errors && step1Data.controls['userName'].hasError('minlength')">
+                Email Should be 3 digit 
+              </mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder=""
+          value=""
+          formControlName="password"
+          type="password"
+        />
+        <mat-error
+          *ngIf="
+            step1Data.controls['password'].errors &&
+            step1Data.controls['password'].hasError('required')
+          "
+        >
+          Password is required
+        </mat-error>
+        <mat-error
+          *ngIf="
+            step1Data.controls['password'].errors &&
+            step1Data.controls['password'].hasError('minlength')
+          "
+        >
+          Password Should be 3 digit
+        </mat-error>
+      </mat-form-field>
+
+      <mat-card-actions class="text-center mr-0">
+        <button
+          [disabled]="step1Data.invalid"
+          type="submit"
+          mat-raised-button
+          color="warn"
+        >
+          Register
+        </button>
+      </mat-card-actions>
+
+      <div class="mt-2 text-center">
+        Already have account? &nbsp;<a id="login-now-btn" href="/login">Login here</a>
+      </div>
+    </form>
+  </mat-card>
+</div>
