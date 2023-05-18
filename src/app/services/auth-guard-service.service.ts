@@ -8,10 +8,10 @@ export class AuthGuardServiceService {
   }
 
   setToken(token: any) {
-    sessionStorage.setItem("token", token);
+    sessionStorage.setItem("token", token)
   }
 
   getToken(){
-    return sessionStorage.getItem('token');
+    return sessionStorage.getItem('token')
   }
 }
